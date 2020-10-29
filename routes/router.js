@@ -29,9 +29,9 @@ router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
           } else {
             // has hashed pw => add to database
             db.query(
-              `INSERT INTO users (id, username, password, create_date) VALUES ('${uuid.v4()}', ${db.escape(
+              `INSERT INTO users (id, username, password, e_name, create_date) VALUES ('${uuid.v4()}', ${db.escape(
                 req.body.username
-              )}, ${db.escape(hash)}, now())`,
+              )}, ${db.escape(hash)}, ${db.escape(req.body.e_name)}, now())`,
               (err, result) => {
                 if (err) {
                   throw err;

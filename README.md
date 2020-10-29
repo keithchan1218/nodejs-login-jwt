@@ -37,6 +37,8 @@ Create `db.js, users.js, router.js` and `index.js`
 - Login (get the JWT Token)
 - Browse any route with the JWT Token (Logined)
 
+## next();
+
 ## Flow
 index -> router -> users -> db
 

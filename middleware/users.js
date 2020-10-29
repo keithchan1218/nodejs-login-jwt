@@ -24,6 +24,12 @@ module.exports = {
         msg: 'Both passwords must match'
       });
     }
+    // english name
+    if(!req.body.e_name){
+      return res.status(400).send({
+        msg: 'Please enter your english name'
+      });
+    }
     next();
   },
 
