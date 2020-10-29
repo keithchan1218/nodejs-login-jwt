@@ -13,7 +13,7 @@ app.use(morgan('dev'));
 
 // add routes
 const router = require('./routes/router');
-app.use('/', router);
+app.use('/api', router);
 
 // run server
 const PORT = process.env.PORT || 3000;
