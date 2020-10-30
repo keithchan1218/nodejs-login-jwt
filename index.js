@@ -6,7 +6,6 @@ const cors = require('cors');
 const morgan = require("morgan");
 
 // set up port
-
 app.use(bodyParser.json());
 app.use(cors());
 app.use(morgan('dev'));

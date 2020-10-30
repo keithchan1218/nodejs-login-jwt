@@ -1,5 +1,6 @@
 
 const jwt = require('jsonwebtoken');
+const secret = require('../lib/secretkey');
 
 module.exports = {
   validateRegister: (req, res, next) => {
@@ -38,7 +39,7 @@ module.exports = {
       const token = req.headers.authorization.split(' ')[1];
       const decoded = jwt.verify(
         token,
-        'SECRETKEY'
+        secret.KEY
       );
       req.userData = decoded;
       next();

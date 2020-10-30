@@ -12,6 +12,8 @@ package-lock.json
 # MySQL config file
 mysql-config.js
 
+secretkey.js
+
 # local env files
 .env.local
 .env.*.local
